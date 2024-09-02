@@ -1,0 +1,87 @@
+<title> - Cattanooga Cat Theater - </title>
+
+<script>
+
+alert("Warning: Video files are very large! Loading may be slow!")
+
+var krazykomics = ["https://ia801502.us.archive.org/18/items/show-1/Show%20%231.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%232.mp4","https://ia601502.us.archive.org/18/items/show-1/Shpw%20%233.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%234.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%235.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%236.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%237.mp4","https://ia801502.us.archive.org/18/items/show-1/Show%20%238.mp4","https://ia801502.us.archive.org/18/items/show-1/Show%20%239.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%2310.mp4","https://ia801502.us.archive.org/18/items/show-1/Show%20%2311%20%28Part%20One%29.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%2311%20%28Part%20Two%29.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%2312.mp4","https://ia801502.us.archive.org/18/items/show-1/Show%20%2313.mp4","https://ia601502.us.archive.org/18/items/show-1/Show%20%2314.mp4","https://ia801502.us.archive.org/18/items/show-1/Show%20%2315.mp4","https://ia801502.us.archive.org/18/items/show-1/Show%20%2316.mp4","https://ia801502.us.archive.org/18/items/show-1/Show%20%2317.mp4","https://archive.org/download/1960KelloggsOKsCerealWithYogiBear/1960%20Kellogg%27s%20OK%27s%20Cereal%20with%20Yogi%20Bear.mp4"];
+
+var comicbook = document.getElementById("comicmain");
+
+var comicindex = 0
+
+var albatross = comicindex + 1;
+
+function comicupdate() {
+ if (comicindex > krazykomics.length - 1) { comicindex = krazykomics.length - 1 }
+
+ if (comicindex > krazykomics.length - 1) { console.log("limit reach") }
+
+ if (comicindex < 0) { comicindex = 0 }
+
+ document.getElementById("comicmain").src = krazykomics[comicindex];
+ 
+ albatross = comicindex + 1
+ 
+ document.getElementById("comicname").innerHTML = "[ Show " + albatross + " ]";
+ 
+}
+
+
+function comicmove(dir) {
+ if (dir == "+") { comicindex = comicindex + 1 }
+ if (dir == "-") { comicindex = comicindex - 1 }
+
+ comicupdate();
+}
+
+if (krazykomics == []) {
+ console.warn("You did not set the contents of the 'krazykomics' list. Make sure to assign the contents before the 'theatermain' object in your page")
+}
+
+// Make sure to put a 'comicupdate' function call at the end of the page
+
+</script>
+
+<style> 
+
+body { background-color: navajowhite }
+
+#comicmain { border: 10px }
+
+</style>
+
+<br>
+
+<center>
+
+<h1> - The Cattanooga Theatre - </h1>
+
+<br>
+
+<h2 id="comicname"> [ Show - ] </h2>
+
+<video controls height="480" source src="https://www.w3schools.com/tags/movie.mp4" id='comicmain'>A</video>
+
+<br>
+
+<hr>
+
+<button type="button" onclick=comicmove("-")>Previous</button>
+<button type="button" onclick=comicmove("+")>Next</button>
+
+<br>
+<br>
+<br>
+<br>
+
+<a href="https://en.wikipedia.org/wiki/Cattanooga_Cats"><b>-Information on Cattanooga Cats-</b></a>
+
+</center>
+
+<script> comicupdate(); </script>
+
+<!--This project done partially as a second final project for my web design tutor class. I had a lot less time to finish the actual final project-->
+
+
+

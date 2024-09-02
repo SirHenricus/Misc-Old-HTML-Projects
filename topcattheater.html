@@ -1,0 +1,84 @@
+<title> - Top Cat Theater - </title>
+
+<script>
+
+// code and HTML recycled from yo yogi theater
+
+alert("Warning: Video files are very large! Loading may be slow!")
+
+var krazykomics = ['https://archive.org/download/top-cat_202208/01%20hawaii%20here%20we%20come.mp4', 'https://archive.org/download/top-cat_202208/02%20the%20maharajah%20of%20pookajee.mp4','https://archive.org/download/top-cat_202208/03%20all%20that%20jazz.mp4', 'https://archive.org/download/top-cat_202208/04%20the%20%241%2C000%2C000%20derby.mp4', 'https://archive.org/download/top-cat_202208/05%20the%20violin%20player.mp4', 'https://archive.org/download/top-cat_202208/06%20the%20missing%20heir.mp4', 'https://archive.org/download/top-cat_202208/07%20top%20cat%20falls%20in%20love.mp4', 'https://archive.org/download/top-cat_202208/08%20a%20visit%20from%20mom.mp4', 'https://archive.org/download/top-cat_202208/09%20Naked%20Town.mp4', 'https://archive.org/download/top-cat_202208/10%20Sergeant%20Top%20Cat.mp4', 'https://archive.org/download/top-cat_202208/11%20Choo-Choo_s%20Romance.mp4', 'https://archive.org/download/top-cat_202208/12%20The%20Unscratchables.mp4', 'https://archive.org/download/top-cat_202208/13%20Rafeefleas.mp4', 'https://archive.org/download/top-cat_202208/14%20The%20Tycoon.mp4', 'https://archive.org/download/top-cat_202208/15%20The%20Long%20Hot%20Winter.mp4', 'https://archive.org/download/top-cat_202208/16%20The%20Case%20of%20the%20%20Absent%20Anteater.mp4', 'https://archive.org/download/top-cat_202208/17%20T.C.%20Minds%20the%20Baby.mp4', 'https://archive.org/download/top-cat_202208/18%20Farewell%2C%20Mr.%20Dibble.mp4', 'https://archive.org/download/top-cat_202208/19%20The%20Grand%20Tour.mp4', 'https://archive.org/download/top-cat_202208/20%20The%20Golden%20Fleecing.mp4', 'https://archive.org/download/top-cat_202208/21%20Space%20Monkey.mp4', 'https://archive.org/download/top-cat_202208/22%20The%20Late%20T.C..mp4', 'https://archive.org/download/top-cat_202208/23%20Dibble_s%20Brithday.mp4', 'https://archive.org/download/top-cat_202208/24%20Choo-Choo%20Goes%20Ga-Ga.mp4', 'https://archive.org/download/top-cat_202208/25%20King%20for%20a%20Day.mp4', 'https://archive.org/download/top-cat_202208/26%20The%20Con%20Men.mp4', 'https://archive.org/download/top-cat_202208/27%20Dibble%20Breaks%20The%20Rec.mp4', 'https://archive.org/download/top-cat_202208/28%20Dibble%20Sings%20Again.mp4', 'https://archive.org/download/top-cat_202208/29%20Griswald.mp4', 'https://archive.org/download/top-cat_202208/30%20Dibble_s%20Double.mp4', 'https://archive.org/download/top-cat_202208/Top%20Cat%20Intro%20Singalong%20Extras-CTRC.mp4', 'https://archive.org/download/top-cat_202208/Top%20Cat%20J.B.%20and%20Co.%20Original%20Series%20Pitchboards%20for%20Cat%20Waleder%20Extras-CTRC.mp4', 'https://archive.org/download/top-cat_202208/Top%20Cat%20Kellogs%20Corn%20Flakes%20TV%20ads%20Extras-CTRC.mp4', 'https://archive.org/download/top-cat_202208/Top%20Cat%20The%20Making%20of%20Top%20Cat%20Extras-CTRC.mp4', 'https://archive.org/download/top-cat_202208/Top%20Cat%20Voice%20Actors%20Interviews%20Extras-CTRC.mp4'];
+
+var comicbook = document.getElementById("comicmain");
+
+var comicindex = 0
+
+var albatross = comicindex + 1;
+
+function comicupdate() {
+ if (comicindex > krazykomics.length - 1) { comicindex = krazykomics.length - 1 }
+
+ if (comicindex > krazykomics.length - 1) { console.log("limit reach") }
+
+ if (comicindex < 0) { comicindex = 0 }
+
+ document.getElementById("comicmain").src = krazykomics[comicindex];
+ 
+ albatross = comicindex + 1
+ 
+ document.getElementById("comicname").innerHTML = "[ Show " + albatross + " ]";
+ 
+}
+
+
+function comicmove(dir) {
+ if (dir == "+") { comicindex = comicindex + 1 }
+ if (dir == "-") { comicindex = comicindex - 1 }
+
+ comicupdate();
+}
+
+if (krazykomics == []) {
+ console.warn("You did not set the contents of the 'krazykomics' list. Make sure to assign the contents before the 'theatermain' object in your page")
+}
+
+// Make sure to put a 'comicupdate' function call at the end of the page
+
+</script>
+
+<style> 
+
+body { background-color: navajowhite }
+
+#comicmain { border: 10px }
+
+</style>
+
+<br>
+
+<center>
+
+<h1> - Top Cat Theatre - </h1>
+
+<br>
+
+<h2 id="comicname"> [ Show - ] </h2>
+
+<video controls height="480" source src="https://www.w3schools.com/tags/movie.mp4" id='comicmain'>A</video>
+
+<br>
+
+<hr>
+
+<button type="button" onclick=comicmove("-")>Previous</button>
+<button type="button" onclick=comicmove("+")>Next</button>
+
+<br>
+<br>
+<br>
+<br>
+
+<a href="https://en.wikipedia.org/wiki/Top_Cat"><b>-Information on Top Cat-</b></a>
+
+</center>
+
+<script> comicupdate(); </script>

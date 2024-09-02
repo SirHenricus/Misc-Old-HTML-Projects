@@ -1,0 +1,84 @@
+<title> - Pink Panther Theater - </title>
+
+<script>
+
+// code and HTML recycled from yo yogi! theater
+
+alert("Warning: There are 123 videos in this theater! Loading may be slow!")
+
+var krazykomics = ['https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-A%20Fly%20in%20the%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-An%20Ounce%20of%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Bobolink%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Bully%20for%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Cat%20and%20the%20Pinkstalk.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Come%20on%20In%21%20The%20Water%27s%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Congratulations%21%20It%27s%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Dial%20-P-%20For%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Dietetic%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Doctor%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Extinct%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Forty%20Pink%20Winks.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-G.I.%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Genie%20With%20the%20Light%20Pink%20Fur.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Gong%20with%20the%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-In%20the%20Pink%20of%20the%20Night.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-In%20the%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-It%27s%20Pink%2C%20But%20Is%20It%20Mink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Jet%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Keep%20The%20Forests%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Little%20Beaux%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Lucky%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Mystic%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-OLYMPINKS%21.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-PSST%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pet%20Pink%20Pebbles.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pickled%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%208-Ball.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Arcade.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Aye.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Bananas.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Blue%20Plate.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Breakfast.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Campaign.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Da%20Vinci.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Daddy.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Elephant.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Ice.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Lemonade.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Lightning.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Outs.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Pajamas.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Panic.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Panzer.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Paradise.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Pest%20Control.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Pictures.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Piper.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Pistons.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Plasma.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Posies.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Pranks.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Press.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Pull.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Punch.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Quackers.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20S.W.A.T.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Sphinx.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Streaker.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Suds.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Trumpet.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Tuba-Dore.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20U.F.O.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Valiant.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20Z-Z-Z.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20and%20Shovel.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20in%20the%20Clink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20in%20the%20Drink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20in%20the%20Woods.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20is%20a%20Many%20Splintered%20Thing.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20of%20the%20Litter.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%20on%20the%20Cob.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink%2C%20Plunk%2C%20Plink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink-A-Boo.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink-A-Rella.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink-Come%20Tax.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink-In.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pink-Tails%20for%20Two.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pinkadilly%20Circus.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pinkfinger.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pinknic.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pinkologist.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Pinto%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Prefabricated%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Prehistoric%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Psychedelic%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Put%20Put%2C%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Reel%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Rock-A-Bye%20Pinky.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Salmon%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Sherlock%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Shocking%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Sink%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Sky%20Blue%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Slink%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Smile%20Pretty%2C%20Say%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Spark%20Plug%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Sprinkle%20Me%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Star%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-String%20Along%20In%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Super%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Supermarket%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Hand%20is%20Pinker%20than%20the%20Eye.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20Blueprint.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20Flea.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20Package%20Plot.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20Phink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20Pill.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20Pro.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20Quarterback.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20Tail%20Fly.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Pink%20of%20Bagdad.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-The%20Scarlet%20Pinkernel.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Therapeutic%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Think%20Before%20You%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Tickled%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Toro%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Trail%20of%20Lonesome%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Twinkle%2C%20Twinkle%20Little%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Twinkle%2C%20Twinkle%2C%20Little%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Vitamin%20Pink.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-We%20Give%20Pink%20Stamps.mp4', 'https://archive.org/download/ThePinkPanther-cartoons/The%20Pink%20Panther%20in%20-Yankee%20Doodle%20Pink.mp4'];
+
+var comicbook = document.getElementById("comicmain");
+
+var comicindex = 0
+
+var albatross = comicindex + 1;
+
+function comicupdate() {
+ if (comicindex > krazykomics.length - 1) { comicindex = krazykomics.length - 1 }
+
+ if (comicindex > krazykomics.length - 1) { console.log("limit reach") }
+
+ if (comicindex < 0) { comicindex = 0 }
+
+ document.getElementById("comicmain").src = krazykomics[comicindex];
+ 
+ albatross = comicindex + 1
+ 
+ document.getElementById("comicname").innerHTML = "[ Show " + albatross + " ]";
+ 
+}
+
+
+function comicmove(dir) {
+ if (dir == "+") { comicindex = comicindex + 1 }
+ if (dir == "-") { comicindex = comicindex - 1 }
+
+ comicupdate();
+}
+
+if (krazykomics == []) {
+ console.warn("You did not set the contents of the 'krazykomics' list. Make sure to assign the contents before the 'theatermain' object in your page")
+}
+
+// Make sure to put a 'comicupdate' function call at the end of the page
+
+</script>
+
+<style> 
+
+body { background-color: pink }
+
+#comicmain { border: solid 5px; border-color: #8C0046; }
+
+</style>
+
+<br>
+
+<center>
+
+<h1> - The Pink Panther Theatre - </h1>
+
+<br>
+
+<h2 id="comicname"> [ Show - ] </h2>
+
+<video controls height="480" source src="https://www.w3schools.com/tags/movie.mp4" id='comicmain'>A</video>
+
+<br>
+
+<hr>
+
+<button type="button" onclick=comicmove("-")>Previous</button>
+<button type="button" onclick=comicmove("+")>Next</button>
+
+<br>
+<br>
+<br>
+<br>
+
+<a href="https://en.wikipedia.org/wiki/The_Pink_Panther"><b>-Information on Pink Panther-</b></a>
+
+</center>
+
+<script> comicupdate(); </script>
