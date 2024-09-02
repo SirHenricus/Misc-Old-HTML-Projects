@@ -1,0 +1,84 @@
+<title> - Yo Yogi Theater - </title>
+
+<script>
+
+// code and HTML recycled from cattanooga cats theater
+
+alert("Warning: Video files are very large! Loading may be slow!")
+
+var krazykomics = ["https://archive.org/download/1x-11_202207/1x01.mp4","https://archive.org/download/1x-11_202207/1x02.mp4","https://archive.org/download/1x-11_202207/1x03.mp4","https://archive.org/download/1x-11_202207/1x04.mp4","https://archive.org/download/1x-11_202207/1x05.mp4","https://archive.org/download/1x-11_202207/1x06.mp4","https://archive.org/download/1x-11_202207/1x07.mp4","https://archive.org/download/1x-11_202207/1x08.mp4","https://archive.org/download/1x-11_202207/1x09.mp4","https://archive.org/download/1x-11_202207/1x10.mp4","https://archive.org/download/1x-11_202207/1x11.mp4","https://archive.org/download/1x-11_202207/1x12.mp4","https://archive.org/download/1x-11_202207/1x13.mp4","https://ia803406.us.archive.org/23/items/capture-a-1369/CaptureA_1369.mp4","https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2001%20-%20Yogi%20Bear%27s%20Big%20Break%20%281958%29.mp4"];
+
+var comicbook = document.getElementById("comicmain");
+
+var comicindex = 0
+
+var albatross = comicindex + 1;
+
+function comicupdate() {
+ if (comicindex > krazykomics.length - 1) { comicindex = krazykomics.length - 1 }
+
+ if (comicindex > krazykomics.length - 1) { console.log("limit reach") }
+
+ if (comicindex < 0) { comicindex = 0 }
+
+ document.getElementById("comicmain").src = krazykomics[comicindex];
+ 
+ albatross = comicindex + 1
+ 
+ document.getElementById("comicname").innerHTML = "[ Show " + albatross + " ]";
+ 
+}
+
+
+function comicmove(dir) {
+ if (dir == "+") { comicindex = comicindex + 1 }
+ if (dir == "-") { comicindex = comicindex - 1 }
+
+ comicupdate();
+}
+
+if (krazykomics == []) {
+ console.warn("You did not set the contents of the 'krazykomics' list. Make sure to assign the contents before the 'theatermain' object in your page")
+}
+
+// Make sure to put a 'comicupdate' function call at the end of the page
+
+</script>
+
+<style> 
+
+body { background-color: navajowhite }
+
+#comicmain { border: 10px }
+
+</style>
+
+<br>
+
+<center>
+
+<h1> - The Yo Yogi Theatre - </h1>
+
+<br>
+
+<h2 id="comicname"> [ Show - ] </h2>
+
+<video controls height="480" source src="https://www.w3schools.com/tags/movie.mp4" id='comicmain'>A</video>
+
+<br>
+
+<hr>
+
+<button type="button" onclick=comicmove("-")>Previous</button>
+<button type="button" onclick=comicmove("+")>Next</button>
+
+<br>
+<br>
+<br>
+<br>
+
+<a href="https://en.wikipedia.org/wiki/Yo_Yogi!"><b>-Information on Yo Yogi!-</b></a>
+
+</center>
+
+<script> comicupdate(); </script>

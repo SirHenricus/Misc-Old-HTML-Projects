@@ -1,0 +1,99 @@
+<title> - Yogi Bear Theater - </title>
+
+<script>
+
+// code and HTML recycled from yo yogi theater
+
+alert("Warning: There are 70 Video Files in this theater! Video files are also very large!")
+
+var krazykomics = ['https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2001%20-%20Yogi%20Bear%27s%20Big%20Break%20%281958%29.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2002%20-%20Slumber%20Party%20Smarty.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2003%20-%20Pie%20Pirates.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2005%20-%20Foxy%20Hound-Dog.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2006%20-%20Big%20Brave%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2007%20-%20Tally%20Ho%20Ho%20Ho.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2008%20-%20Baffled%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2009%20-%20High%20Fly%20Guy.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2010%20-%20The%20Brave%20Little%20Brave.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2011%20-%20The%20Stout%20Trout.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2012%20-%20The%20Buzzin%27%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2013%20-%20The%20Runaway%20Bear%20%281959%29.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2014%20-%20Be%20My%20Guest%20Pest.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2015%20-%20Duck%20in%20Luck.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2016%20-%20Bear%20on%20a%20Picnic.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2017%20-%20Prize%20Fight%20Fright.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2018%20-%20Brainy%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2019%20-%20Robin%20Hood%20Yogi.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2020%20-%20Daffy%20Daddy.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2021%20-%20Scooter%20Looter.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2022%20-%20Hide%20and%20Go%20Peek.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2023%20-%20Show%20Biz%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2024%20-%20Lullabye-Bye%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2025%20-%20Bare%20Face%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2026%20-%20Papa%20Yogi.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2027%20-%20Stranger%20Ranger.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2028%20-%20Rah%20Rah%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2029%20-%20Bear%20for%20Punishment.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2030%20-%20Nowhere%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2031%20-%20Wound-up%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2032%20-%20Be-Witched%20Bear%20%281960%29.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2033%20-%20Hoodwinked%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2034%20-%20Snow%20White%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2035%20-%20Space%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2036%20-%20Oinks%20and%20Boinks%20%281961%29.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2037%20-%20Booby%20Trapped%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2038%20-%20Gleesome%20Threesome.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2039%20-%20A%20Bear%20Pair.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2040%20-%20Spy%20Guy.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2041%20-%20Do%20or%20Diet.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2042%20-%20Bears%20and%20the%20Bees.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2043%20-%20The%20Biggest%20Show-Off%20on%20Earth.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2044%20-%20Genial%20Genie.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2045%20-%20Cub%20Scout%20Boo-Boo.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2046%20-%20Home-Sweet%20Jellystone.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2047%20-%20Love-Bugged%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2048%20-%20Bearface%20Disguise.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2049%20-%20Slap%20Happy%20Birthday.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2050%20-%20A%20Bear%20Living.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2051%20-%20Disguise%20and%20Gals.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2052%20-%20Touch%20and%20Go-Go-Go.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2053%20-%20Acrobatty%20Yogi.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2054%20-%20Ring-a-Ding%20Picnic%20Basket.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2055%20-%20Iron%20Hand%20Jones.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2056%20-%20Yogi%27s%20Pest%20Guest.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2057%20-%20Missile%20Bound%20Yogi.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2058%20-%20Loco%20Locomotive.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2059%20-%20Missile-Bound%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2060%20-%20A%20Wooin%27%20Bruin.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2061%20-%20Yogi%20in%20the%20City.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2062%20-%20Queen%20Bee%20for%20a%20Day.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2063%20-%20Batty%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2064%20-%20Droop-a-Long%20Yogi.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2065%20-%20Threadbare%20Bear.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2066%20-%20Ice%20Box%20Raider.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2067%20-%20Bear-Foot%20Soldiers.mp4', 'https://archive.org/download/yogi-bear_202109/Yogi%20Bear%2068%20-%20Yogi%27s%20Birthday%20Party%20%281962%29.mp4', 'https://archive.org/download/yogi-bear-big-break/Yogi%20Bear%20Big%20Break.mp4', 'https://archive.org/download/the-new-yogi-bear-show-1988/The%20New%20Yogi%20Bear%20Show%2000%20-%20Show%20Begins%201988%29.mp4'];
+
+var comicbook = document.getElementById("comicmain");
+
+var comicindex = 0
+
+var albatross = comicindex + 1;
+
+function comicupdate() {
+    if (comicindex > krazykomics.length - 1) {
+        comicindex = krazykomics.length - 1
+    }
+
+    if (comicindex > krazykomics.length - 1) {
+        console.log("limit reach")
+    }
+
+    if (comicindex < 0) {
+        comicindex = 0
+    }
+
+    document.getElementById("comicmain").src = krazykomics[comicindex];
+
+    albatross = comicindex + 1
+
+    document.getElementById("comicname").innerHTML = "[ Show " + albatross + " ]";
+
+}
+
+
+function comicmove(dir) {
+    if (dir == "+") {
+        comicindex = comicindex + 1
+    }
+    if (dir == "-") {
+        comicindex = comicindex - 1
+    }
+
+    comicupdate();
+}
+
+if (krazykomics == []) {
+    console.warn("You did not set the contents of the 'krazykomics' list. Make sure to assign the contents before the 'theatermain' object in your page")
+}
+
+// Make sure to put a 'comicupdate' function call at the end of the page
+</script>
+
+<style>
+body {
+    background-color: navajowhite
+}
+
+#comicmain {
+    border: 10px
+}
+</style>
+
+<br>
+
+<center>
+
+    <h1> - Yogi Bear Theater - </h1>
+
+    <br>
+
+    <h2 id="comicname"> [ Show - ] </h2>
+
+    <video controls height="480" source src="https://www.w3schools.com/tags/movie.mp4" id='comicmain'>A</video>
+
+    <br>
+
+    <hr>
+
+    <button type="button" onclick=comicmove("-")>Previous</button>
+    <button type="button" onclick=comicmove("+")>Next</button>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <a href="https://en.wikipedia.org/wiki/The_Yogi_Bear_Show">
+        <b>-Information on Yogi Bear-</b>
+    </a>
+
+</center>
+
+<script>
+comicupdate();
+</script>
